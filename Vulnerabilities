@@ -1,0 +1,20 @@
+SSH:
+
+FTP:
+
+Base OS:
+User Ginger removed
+User Will is not an admin
+Group Training Leads added
+User James added to Training Leads
+Firewall is enabled
+Firewall logging set to high
+Password Maximum age set
+Minimum password length set
+Max number of attempts set
+!authenticate removed from /etc/sudoers
+Apache2 removed
+Netcat removed
+
+
+
