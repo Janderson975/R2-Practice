@@ -1,5 +1,5 @@
 #!/bin/bash
-score_report="/home/cyber/Desktop/ScoreReport.html"
+score_report="/home/jack/Desktop/ScoreReport.html"
 function check()
 {
         if ( eval $1 ); then
