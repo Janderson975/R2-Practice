@@ -1,0 +1,16 @@
+#!/bin/bash
+score_report="/home/cyber/Desktop/ScoreReport.html"
+function check()
+{
+        if ( eval $1 ); then
+                if (cat $score_report | grep $2); then
+                        sed -i "$3/$2/$4/g" $score_report
+                fi
+        elif ( ! eval $1 ); then 
+                if (! cat $score_report | "grep $2</p>"); then
+                        sed -i "$3/$4/$2/g" $score_report
+                fi
+        fi
+}
+
+check 'cat /home/cyber/Desktop/Forensics_1 | grep "L0y0l@B3@t$H@ll"' 'vuln1' '19s' 'Forensics 1 Correct'
