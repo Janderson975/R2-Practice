@@ -10,7 +10,7 @@ Firewall logging set to high
 Password maximum age set
 Minimum password length set
 Max number of attempts set
-!authenticate removed from /etc/sudoers
+NOPASSWD removed from /etc/sudoers
 Apache2 removed
 Netcat removed
 backdoor in root's crontab removed
