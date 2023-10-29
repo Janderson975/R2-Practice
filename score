@@ -28,14 +28,14 @@ check 'cat /etc/login.defs | grep "PASS_MAX_DAYS" | grep "90"' 'vuln9' '27s' 'Ma
 check 'cat /etc/pam.d/common-password | grep "unix.so" | grep "minlen=16"' 'vuln10' '28s' 'Minimum password length set'
 check 'cat /etc/pam.d/common-auth | grep "retry=5"' 'vuln11' '29s' 'Maximum number of login attempts set'
 check '! cat /etc/sudoers | grep "NOPASSWD"' 'vuln12' '30s' 'Insecure sudoers configuration removed'
-check 'dpkg -l | grep "apache2"' 'vuln13' '31s' 'Apache2 removed'
-check 'dpkg -l | grep "netcat"' 'vuln14' '32s' 'Netcat removed'
-check 'cat /var/spool/cron/crontabs/root | grep "netcat"' 'vuln15' '33s' 'Bad cronjob removed'
+check '! dpkg -l | grep "apache2"' 'vuln13' '31s' 'Apache2 removed'
+check '! dpkg -l | grep "netcat"' 'vuln14' '32s' 'Netcat removed'
+check '! cat /var/spool/cron/crontabs/root | grep "netcat"' 'vuln15' '33s' 'Bad cronjob removed'
 
 #SSH
 check 'cat /etc/ssh/sshd_config | grep "Protocol 2"' 'vuln16' '34s' 'SSH uses protocol 2'
 check 'cat /etc/ssh/sshd_config | grep "Port 22"' 'vuln17' '35s' 'SSH runs on port 22'
-check 'cat /etc/ssh/sshd_config | grep "X11Forwarding no"' 'vuln18' '36s' 'SSH X11 forwarding disabled'
+check '! cat /etc/ssh/sshd_config | grep "X11Forwarding yes"' 'vuln18' '36s' 'SSH X11 forwarding disabled'
 
 #FTP
 check 'cat /etc/ftpusers | grep "Will"' 'vuln19' '37s' 'User Will is no longer allowed to access the ftp server'
