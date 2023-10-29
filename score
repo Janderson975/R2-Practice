@@ -23,7 +23,7 @@ check '! cat /etc/group | grep "sudo" | grep "Will"' 'vuln4' '22s' 'User Will is
 check 'cat /etc/group | grep "Training_Leads"' 'vuln5' '23s' 'Group Training_Leads added'
 check 'cat /etc/group | grep "Training_Leads" | grep "James"' 'vuln6' '24s' 'User James added to group Training_Leads'
 check 'ufw status | grep "active"' 'vuln7' '25s' 'Firewall turned on'
-check 'ufw status | grep "active" | grep "high"' 'vuln8' '26s' 'Firewall logging set to high'
+check 'ufw status verbose | grep "active" | grep "high"' 'vuln8' '26s' 'Firewall logging set to high'
 check 'cat /etc/login.defs | grep "PASS_MAX_DAYS" | grep "90"' 'vuln9' '27s' 'Maximum password age set'
 check 'cat /etc/pam.d/common-password | grep "unix.so" | grep "minlen=16"' 'vuln10' '28s' 'Minimum password length set'
 check 'cat /etc/pam.d/common-auth | grep "retry=5"' 'vuln11' '29s' 'Maximum number of login attempts set'
