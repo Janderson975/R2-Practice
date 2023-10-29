@@ -1,16 +1,5 @@
 2 Forensics
 
-SSH:
-SSH uses Protocol 2
-SSH runs on port 22
-SSH X11 forwarding disabled
-
-FTP:
-user Aidan added to ftpusers
-user Will added to ftpusers
-anonymous_enabled=NO
-ssl_enable=YES
-
 Base OS:
 User Ginger removed
 User Will is not an admin
@@ -26,5 +15,13 @@ Apache2 removed
 Netcat removed
 backdoor in root's crontab removed
 
+SSH:
+SSH uses Protocol 2
+SSH runs on port 22
+SSH X11 forwarding disabled
 
-
+FTP:
+user Aidan added to ftpusers
+user Will added to ftpusers
+anonymous_enabled=NO
+ssl_enable=YES
