@@ -14,8 +14,8 @@ function check()
 }
 
 #Forensics
-check 'cat /home/cyber/Desktop/Forensics_1 | grep "L0y0l@B3@t$H@ll"' 'vuln1' '19s' 'Forensics 1 Correct'
-check 'cat /home/cyber/Desktop/Forensics_2 | grep "L0y0l@B3@t$H@ll"' 'vuln2' '20s' 'Forensics 2 Correct'
+check 'cat /home/jack/Desktop/Forensics_1 | grep "cryptography is so cool"' 'vuln1' '19s' 'Forensics 1 Correct'
+check 'cat /home/jack/Desktop/Forensics_2 | grep "You know stenography now!"' 'vuln2' '20s' 'Forensics 2 Correct'
 
 #Base OS
 check 'cat /etc/group | grep "Ginger"' 'vuln3' '21s' 'User Ginger removed'
